@@ -20,7 +20,6 @@ dir_list.sort()  # 정렬
 
 ref_data = []
 to_data = []
-
 # 참고 할 이름을 가진 파일들의 확장자만 추출
 for item in dir_list:
     if item.endswith(EXT_REF):
@@ -67,7 +66,7 @@ def save_log(obj) -> bool:
         log_f.close()
         return True
     except:
-        raise RuntimeError("Log File Failed")
+        raise RuntimeError("Log File Write Failed")
 
 
 # 로그 파일 존재하지 않을 때, 파일 생성
